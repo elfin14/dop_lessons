@@ -22,7 +22,6 @@ function App() {
     const Clear =()=>{
         setData([])
     }
-
     return (
         <div className="App">
             <Button name={'Get name'} callback={useCallback}/>
@@ -30,6 +29,7 @@ function App() {
             <ul>
                 {data.map((el) => {
                     return (<li key={el.id}>
+                            <span>{el.userId}</span>
                             <span>{el.title}</span>
                             <span>{String(el.completed)}</span>
                         </li>
